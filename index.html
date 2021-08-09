@@ -58,21 +58,39 @@ body {
 <body>
 <div id="particles-js"></div>
 <div class="container">
-    <div class="row">
-        <div class="col-md-12 m-auto text-center">
-            <nav class="navbar navbar-light m-auto" style="margin-left:80px; margin-top: 80px;">
-                <div class="container-fluid">
-                  <form>
-                      <a href="registratsiya.html" class="btn btn-success" type="submit">Ro'yxatdan o'tish</a>
-                    <a href="kirish.html" class="btn btn-success" type="submit">Kirish</a>
-                  </form>
-                </div>
-              </nav>
-        </div>
+  <div class="row">
+      <div class="col-md-12 m-auto text-center">
+          <nav class="navbar navbar-light m-auto" style="margin-left:80px; margin-top: 80px;">
+              <div class="container-fluid">
+                <form>
+                    <a href="registratsiya.html" class="btn btn-success" type="submit" >Ro'yxatdan o'tish</a>
+                  <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Kirish</button>
+                </form>
+              </div>
+            </nav>
+      </div>
+  </div>
+<!-- end open page -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Tizimga kirish uchun nickname va parolni kiriting</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="user.php" method="post">
+          <input type="text" placeholder="Nickname" class="form-control">
+          <br>
+          <input type="password" placeholder="Parol" class="form-control">
+      </div>
+      <div class="modal-footer">
+        <input type="submit" value="Kirish" type="button" class="btn btn-primary" data-bs-dismiss="modal">
+      </form>
+      </div>
     </div>
-    <div class="row">
-        
-    </div>
+  </div>
 </div>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
@@ -206,7 +224,14 @@ update = function() {
   requestAnimationFrame(update);
 };
 requestAnimationFrame(update);
+
+
+function myFunc(){
+document.getElementById('showpanel').style.display = 'block';
+}
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 </body>
 </html>
